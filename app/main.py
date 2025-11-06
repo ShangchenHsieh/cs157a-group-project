@@ -3,6 +3,7 @@ from app.use_cases.user_registration import register
 from app.use_cases.user_login import login
 from app.use_cases.view_profile import view_profile
 from app.use_cases.edit_profile import edit_profile
+from app.use_cases.follow_user import follow_user
 
 WELCOME_MESSAGE = """
 ================================\n\nWELCOME TO THE APPLICATION!\n
@@ -68,11 +69,9 @@ def main():
                         print("Edit Profile Selected")
                         edit_profile(username)
 
-                    elif choice == '5': 
-                        print("Follow Another User - To be implemented")
-                        #########################
-                        ### TO BE IMPLEMENTED ###
-                        #########################
+                    elif choice == '5': # IMPLEMENTED
+                        print("Follow Another User")
+                        follow_user(username)
                     elif choice == '6':
                         print("Unfollow a User - To be implemented")
                         #########################

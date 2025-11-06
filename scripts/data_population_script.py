@@ -1,6 +1,6 @@
 """Populate Neo4j with users from CSV and synthetic users to reach targets.
 
-Creates User nodes (fields: username, name, email, password) and FOLLOWS
+Creates User nodes (fields: username, name, email, password) and FOLLOW
 relationships between them. Designed to be idempotent (uses MERGE).
 
 Run:
