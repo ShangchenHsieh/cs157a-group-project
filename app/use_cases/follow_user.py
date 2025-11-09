@@ -15,7 +15,7 @@ def follow_user(username: str) -> None:
 
     cypher_follow = """
     MATCH (a:User {username: $follower}), (b:User {username: $followee})
-    MERGE (a)-[r:FOLLOW]->(b)
+    MERGE (a)-[r:FOLLOWS]->(b)
     RETURN a.username AS follower, b.username AS followee, type(r) AS rel
     """
 
