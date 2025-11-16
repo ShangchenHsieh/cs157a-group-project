@@ -5,6 +5,10 @@ from app.use_cases.view_profile import view_profile
 from app.use_cases.edit_profile import edit_profile
 from app.use_cases.follow_user import follow_user
 
+from app.use_cases.unfollow_user import unfollow_user
+from app.use_cases.view_friends import view_friends
+from app.use_cases.friend_recommend import rec_friends 
+
 WELCOME_MESSAGE = """
 ================================\n\nWELCOME TO THE APPLICATION!\n
 ================================\n
@@ -73,12 +77,14 @@ def main():
                         print("Follow Another User")
                         follow_user(username)
                     elif choice == '6':
-                        print("Unfollow a User - To be implemented")
+                        print("Unfollow a User - Testing")
+                        unfollow_user(username)
                         #########################
                         ### TO BE IMPLEMENTED ###
                         #########################
                     elif choice == '7':
-                        print("View Friends - To be implemented")
+                        print("View Friends - Testing")
+                        view_friends(username)
                         #########################
                         ### TO BE IMPLEMENTED ###
                         #########################
@@ -88,7 +94,8 @@ def main():
                         ### TO BE IMPLEMENTED ###
                         #########################
                     elif choice == '9':
-                        print("Friend Recommendations - To be implemented")
+                        print("Friend Recommendations - Testing")
+                        rec_friends(username)
                         #########################
                         ### TO BE IMPLEMENTED ###
                         #########################
