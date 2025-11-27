@@ -34,4 +34,4 @@ def unfollow_user(username: str) -> None:
             return
 
         s.run(cypher_unfollow, follower=follower, followee=followee).single()
-        print("Failed to delete FOLLOW relationship — check logs or DB connectivity.")
+        print(f"{follower} unfollowed {followee}")
